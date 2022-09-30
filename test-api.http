@@ -1,4 +1,4 @@
-POST http://localhost:1234/users
+POST http://localhost:10000/users
 Content-Type: application/json
 
 {}
@@ -11,7 +11,7 @@ client.test("Request executed successfully", function() {
 
 ###
 
-PUT http://localhost:1234/users/123
+PUT http://localhost:10000/users/123
 Content-Type: application/json
 
 {}
@@ -24,7 +24,7 @@ client.test("Request executed successfully", function() {
 
 ###
 
-PATCH http://localhost:1234/users/123
+PATCH http://localhost:10000/users/123
 Content-Type: application/json
 
 {}
@@ -37,7 +37,7 @@ client.test("Request executed successfully", function() {
 
 ###
 
-DELETE http://localhost:1234/users/123
+DELETE http://localhost:10000/users/123
 Content-Type: application/json
 
 {}
@@ -47,5 +47,19 @@ client.test("Request executed successfully", function() {
   client.assert(response.status === 204, "Response status is not 204");
 });
 %}
+
+###
+
+GET http://localhost:10000/users
+Content-Type: application/json
+
+{}
+
+###
+
+GET http://localhost:10000/users/123
+Content-Type: application/json
+
+{}
 
 ###
